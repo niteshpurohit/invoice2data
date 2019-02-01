@@ -39,7 +39,11 @@ def write_to_file(data, path):
 
     with codecs.open(filename, "w", encoding='utf-8') as json_file:
         for line in data:
-            line['date'] = line['date'].strftime('%d/%m/%Y')
+            try:
+                line['date'] = line['date'].strftime('%d/%m/%Y')
+            except:
+                print('toJSON ignoring date format')
+
         print(type(json))
         print(json)
         json.dump(

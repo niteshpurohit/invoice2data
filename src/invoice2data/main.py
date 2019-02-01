@@ -29,6 +29,7 @@ input_mapping = {
     'tesseract4': tesseract4,
     'pdfminer': pdfminer_wrapper,
     'gvision': gvision,
+    'textfile': textfile
 }
 
 output_mapping = {'csv': to_csv, 'json': to_json, 'xml': to_xml, 'none': None}
@@ -80,7 +81,10 @@ def extract_data(invoicefile, templates=None, input_module=pdftotext):
         templates = read_templates()
 
     # print(templates[0])
-    extracted_str = input_module.to_text(invoicefile).decode('utf-8')
+    try:
+        extracted_str = input_module.to_text(invoicefile).decode('utf-8')
+    except:
+        extracted_str = input_module.to_text(invoicefile)
 
     logger.debug('START pdftotext result ===========================')
     logger.debug(extracted_str)

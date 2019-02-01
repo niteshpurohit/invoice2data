@@ -49,6 +49,9 @@ def write_to_file(data, path):
             for k, v in line.items():
                 # first_row.append(k)
                 if k == 'date':
-                    v = v.strftime('%d/%m/%Y')
+                    try:
+                        v = v.strftime('%d/%m/%Y')
+                    except:
+                        print('toCSV ignoring date format')
                 csv_items.append(v)
             writer.writerow(csv_items)
