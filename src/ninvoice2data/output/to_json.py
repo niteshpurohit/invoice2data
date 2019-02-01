@@ -27,7 +27,7 @@ def write_to_file(data, path):
 
     Examples
     --------
-        >>> from invoice2data.output import to_json
+        >>> from ninvoice2data.output import to_json
         >>> to_json.write_to_file(data, "/exported_json/invoice.json")
         >>> to_json.write_to_file(data, "invoice.json")
 

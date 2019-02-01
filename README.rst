@@ -1,4 +1,4 @@
-Data extractor for PDF invoices - invoice2data
+Data extractor for PDF invoices - ninvoice2data
 ==============================================
 
 |Circle CI|
@@ -47,68 +47,68 @@ If possible get the latest
 included with macOS Homebrew, Debian and Ubuntu. Without it,
 ``pdftotext`` won’t parse tables in PDF correctly.
 
-2. Install ``invoice2data`` using pip
+2. Install ``ninvoice2data`` using pip
 
 ::
 
-    pip install invoice2data
+    pip install ninvoice2data
 
 Usage
 -----
 
 Basic usage. Process PDF files and write result to CSV.
 
- - ``invoice2data invoice.pdf``
- - ``invoice2data *.pdf``
+ - ``ninvoice2data invoice.pdf``
+ - ``ninvoice2data *.pdf``
 
 Choose any of the following input readers:
 
- - pdftotext ``invoice2data --input-reader pdftotext invoice.pdf``
- - tesseract ``invoice2data --input-reader tesseract invoice.pdf``
- - pdf miner ``invoice2data --input-reader pdfminer invoice.pdf``
- - tesseract4 ``invoice2data --input-reader tesseract4 invoice.pdf``
- - gvision ``invoice2data --input-reader gvision invoice.pdf`` (needs ``GOOGLE_APPLICATION_CREDENTIALS`` env var)
+ - pdftotext ``ninvoice2data --input-reader pdftotext invoice.pdf``
+ - tesseract ``ninvoice2data --input-reader tesseract invoice.pdf``
+ - pdf miner ``ninvoice2data --input-reader pdfminer invoice.pdf``
+ - tesseract4 ``ninvoice2data --input-reader tesseract4 invoice.pdf``
+ - gvision ``ninvoice2data --input-reader gvision invoice.pdf`` (needs ``GOOGLE_APPLICATION_CREDENTIALS`` env var)
 
 Choose any of the following output formats:
 
- - csv ``invoice2data --output-format csv invoice.pdf``
- - json ``invoice2data --output-format json invoice.pdf``
- - xml ``invoice2data --output-format xml invoice.pdf``
+ - csv ``ninvoice2data --output-format csv invoice.pdf``
+ - json ``ninvoice2data --output-format json invoice.pdf``
+ - xml ``ninvoice2data --output-format xml invoice.pdf``
 
 Save output file with custom name or a specific folder
-``invoice2data --output-format csv --output-name myinvoices/invoices.csv invoice.pdf``
+``ninvoice2data --output-format csv --output-name myinvoices/invoices.csv invoice.pdf``
 
 **Note:** You must specify the ``output-format`` in order to create
 ``output-name``
 
 Specify folder with yml templates. (e.g. your suppliers)
-``invoice2data --template-folder ACME-templates invoice.pdf``
+``ninvoice2data --template-folder ACME-templates invoice.pdf``
 
 Only use your own templates and exclude built-ins
-``invoice2data --exclude-built-in-templates --template-folder ACME-templates invoice.pdf``
+``ninvoice2data --exclude-built-in-templates --template-folder ACME-templates invoice.pdf``
 
 Processes a folder of invoices and copies renamed invoices to new
-folder. ``invoice2data --copy new_folder folder_with_invoices/*.pdf``
+folder. ``ninvoice2data --copy new_folder folder_with_invoices/*.pdf``
 
 Processes a single file and dumps whole file for debugging (useful when
 adding new templates in templates.py)
-``invoice2data --debug my_invoice.pdf``
+``ninvoice2data --debug my_invoice.pdf``
 
 Recognize test invoices:
-``invoice2data invoice2data/test/pdfs/* --debug``
+``ninvoice2data ninvoice2data/test/pdfs/* --debug``
 
 If you want to use it as a lib just do
 
 ::
 
-    from invoice2data import extract_data
+    from ninvoice2data import extract_data
 
     result = extract_data('path/to/my/file.pdf')
 
 Template system
 ---------------
 
-See ``invoice2data/extract/templates`` for existing templates. Just extend the
+See ``ninvoice2data/extract/templates`` for existing templates. Just extend the
 list to add your own. If deployed by a bigger organisation, there should
 be an interface to edit templates for new suppliers. 80-20 rule. For a
 short tutorial on how to add new templates, see
@@ -187,5 +187,5 @@ Related Projects
 -  `CVision <http://www.cvisiontech.com/library/document-automation/forms-processing/extract-data-from-invoice.html>`__
    (Commercial)
 
-.. |Circle CI| image:: https://circleci.com/gh/invoice-x/invoice2data.svg?style=svg
-   :target: https://circleci.com/gh/invoice-x/invoice2data
+.. |Circle CI| image:: https://circleci.com/gh/invoice-x/ninvoice2data.svg?style=svg
+   :target: https://circleci.com/gh/invoice-x/ninvoice2data

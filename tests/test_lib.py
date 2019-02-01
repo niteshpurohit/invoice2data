@@ -6,9 +6,9 @@ except ImportError:
     from io import StringIO  # noqa: F401
 import unittest
 
-from invoice2data.main import extract_data
-from invoice2data.input import pdftotext, tesseract, pdfminer_wrapper
-from invoice2data.output import to_csv, to_json, to_xml
+from ninvoice2data.main import extract_data
+from ninvoice2data.input import pdftotext, tesseract, pdfminer_wrapper
+from ninvoice2data.output import to_csv, to_json, to_xml
 from .common import get_sample_files
 
 

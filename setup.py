@@ -5,7 +5,7 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     package_data={
-        'invoice2data.extract': [
+        'ninvoice2data.extract': [
             'templates/com/*.yml',
             'templates/de/*.yml',
             'templates/es/*.yml',

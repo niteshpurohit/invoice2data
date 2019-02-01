@@ -28,7 +28,7 @@ def write_to_file(data, path):
 
     Examples
     --------
-        >>> from invoice2data.output import to_xml
+        >>> from ninvoice2data.output import to_xml
         >>> to_xml.write_to_file(data, "/exported_xml/invoice.xml")
         >>> to_xml.write_to_file(data, "invoice.xml")
 

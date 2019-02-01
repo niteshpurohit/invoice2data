@@ -10,7 +10,7 @@ invoices by hand. We use a simple YML-format. Many options are optional
 and you just need them to take care of edge cases.
 
 Existing templates can be found in the project folder or the installed
-package under ``/invoice2data/templates/``. During testing you can use
+package under ``/ninvoice2data/templates/``. During testing you can use
 the ``--template-folder`` option to point to your own, new template
 files. If you add or improve templates that could be useful for
 everyone, we encourage you to file a pull request to the main repo, so
@@ -291,11 +291,11 @@ accordingly.
 4. First test run
 ~~~~~~~~~~~~~~~~~
 
-Now we’re ready to see how far we are off. Run ``invoice2data`` with the
+Now we’re ready to see how far we are off. Run ``ninvoice2data`` with the
 following debug command to see if your keywords match and how much work
 is needed for dates, etc.
 
-``invoice2data --template-folder tpl --debug invoice-XXX.pdf``
+``ninvoice2data --template-folder tpl --debug invoice-XXX.pdf``
 
 This test run shows you how the program will “see” the text in the
 invoice. Parsing PDFs is sometimes a bit unpredictable. Also make sure

@@ -20,7 +20,7 @@ def write_to_file(data, path):
 
     Examples
     --------
-        >>> from invoice2data.output import to_csv
+        >>> from ninvoice2data.output import to_csv
         >>> to_csv.write_to_file(data, "/exported_csv/invoice.csv")
         >>> to_csv.write_to_file(data, "invoice.csv")
 

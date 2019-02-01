@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/invoice-x/invoice2data
+    working_directory: ~/invoice-x/ninvoice2data
     parallelism: 1
     shell: /bin/bash --login
     # CircleCI 2.0 does not support environment variables that refer to each other the same way as 1.0 did.

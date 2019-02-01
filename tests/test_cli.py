@@ -10,8 +10,8 @@ except ImportError:
 import unittest
 
 import pkg_resources
-from invoice2data.main import create_parser, main
-from invoice2data.extract.loader import read_templates
+from ninvoice2data.main import create_parser, main
+from ninvoice2data.extract.loader import read_templates
 
 from .common import get_sample_files
 
@@ -92,11 +92,11 @@ class TestCLI(unittest.TestCase):
         '''
 
     # def test_template(self):
-    #     directory = os.path.dirname("invoice2data/test/temp_test/")
+    #     directory = os.path.dirname("ninvoice2data/test/temp_test/")
     #     os.makedirs(directory)
     #     args = self.parser.parse_args(['--template-folder', 'ACME-templates', self._get_test_file_path()])
     #     main(args)
-    #     shutil.rmtree('invoice2data/test/temp_test/', ignore_errors=True)
+    #     shutil.rmtree('ninvoice2data/test/temp_test/', ignore_errors=True)
     #     self.assertTrue(args.template_folder)
 
     def test_exclude_template(self):
@@ -107,7 +107,7 @@ class TestCLI(unittest.TestCase):
         directory = os.path.dirname("tests/temp_test/")
         os.makedirs(directory)
         shutil.copy(
-            'src/invoice2data/extract/templates/com/com.oyo.invoice.yml', 'tests/temp_test/'
+            'src/ninvoice2data/extract/templates/com/com.oyo.invoice.yml', 'tests/temp_test/'
         )
         args = self.parser.parse_args(
             ['--exclude-built-in-templates', '--template-folder', directory, my_file]

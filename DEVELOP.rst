@@ -1,15 +1,15 @@
 Development
 ===========
 
-If you are looking to get involved improving ``invoice2data``, this
+If you are looking to get involved improving ``ninvoice2data``, this
 guide will help you get started quickly.
 
 Install
 -------
 
 1. Fork main repository (optional)
-2. Clone repository: ``git clone https://github.com/m3nu/invoice2data``
-3. Install as editable: ``pip install -e invoice2data``
+2. Clone repository: ``git clone https://github.com/m3nu/ninvoice2data``
+3. Install as editable: ``pip install -e ninvoice2data``
 
 Some little-used dependencies are optional. Like ``pytesseract`` and
 ``pdfminer``. Install if needed.
@@ -17,7 +17,7 @@ Some little-used dependencies are optional. Like ``pytesseract`` and
 Organization
 ------------
 
-Major folders in the ``invoice2data`` package and their purpose:
+Major folders in the ``ninvoice2data`` package and their purpose:
 
 -  ``input``: Has modules for extracting plain text from files.
    Currently mostly PDF files.
@@ -43,7 +43,7 @@ Testing
 Every new feature should have a test to make sure it still works after
 modifications done by you or someone else in the future.
 
-To run tests using the current Python version: ``pytest invoice2data``
+To run tests using the current Python version: ``pytest ninvoice2data``
 
 To run tests using all supported Python versions: ``tox`` (needs
 ``pyenv`` and corresponding Python versions installed.)
@@ -55,5 +55,5 @@ To test coverage we recommend using ``pytest-cov``
 ::
 
    pip install pytest-cov
-   pytest --cov-report html --cov invoice2data --verbose
+   pytest --cov-report html --cov ninvoice2data --verbose
    [yourbrowser] htmlconv/index.hml
