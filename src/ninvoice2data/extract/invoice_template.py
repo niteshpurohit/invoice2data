@@ -111,6 +111,9 @@ class InvoiceTemplate(OrderedDict):
             value, date_formats=self.options['date_formats'], languages=self.options['languages']
         )
         logger.debug("result of date parsing=%s", res)
+        if res == None:
+            logger.debug("result of date parsing override=%s", res)
+            res = value
         return res
 
     def coerce_type(self, value, target_type):
